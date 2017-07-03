@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	   http://www.springframework.org/schema/mvc
+	   http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	   http://www.springframework.org/schema/context
+	   http://www.springframework.org/schema/context/spring-context.xsd"
+       default-lazy-init="true">
+
+    <!-- mvc 注解驱动配置 使用默认的 HandlerMapping 和 HandlerAdapter 使用@JsonBody需要关闭-->
+    <!--<mvc:annotation-driven/>-->
+
+    <!-- 扫描 Controller 的包结构 -->
+    <context:component-scan base-package="qunar.web.spring,com.qunar.echarts.controller"/>
+
+    <!-- 默认首页 -->
+    <mvc:view-controller path="/" view-name="redirect:/atp.html"/>
+
+</beans>

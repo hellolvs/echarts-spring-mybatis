@@ -1,0 +1,8 @@
+com/qunar/echarts/util/DateTimeTypeHandler.class
+com/qunar/echarts/dao/FlightMinuteDao.class
+com/qunar/echarts/util/CustomDateTimeSerializer.class
+com/qunar/echarts/model/FlightMinuteModel.class
+com/qunar/echarts/util/CustomDateTimeDeserializer.class
+com/qunar/echarts/controller/FlightMinuteController.class
+com/qunar/echarts/service/impl/FlightMinuteServiceImpl.class
+com/qunar/echarts/service/FlightMinuteService.class

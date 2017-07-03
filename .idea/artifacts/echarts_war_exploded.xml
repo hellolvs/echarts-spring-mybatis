@@ -1,0 +1,88 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="echarts:war exploded">
+    <output-path>$PROJECT_DIR$/target/ROOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="echarts" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.guava:guava:15.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.5" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.0.13" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.0.13" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.1" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.21" />
+          <element id="library" level="project" name="Maven: com.alibaba.druid:druid-wrapper:0.2.9" />
+          <element id="library" level="project" name="Maven: com.alibaba:druid:0.2.9" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.3" />
+          <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.2.1" />
+          <element id="library" level="project" name="Maven: com.qunar.base:meerkat-mybatis:2.2.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.5" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.2.9.RELEASE" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.3.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.3.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.3.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-joda:2.3.0" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.6" />
+          <element id="library" level="project" name="Maven: qunar.common:common-web:9.0.6" />
+          <element id="library" level="project" name="Maven: qunar.common:common-lang:9.0.6" />
+          <element id="library" level="project" name="Maven: qunar.common:common-concurrent:9.0.6" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-client:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.tc:common-zookeeper:1.1.4" />
+          <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.7.5" />
+          <element id="library" level="project" name="Maven: org.apache.curator:curator-recipes:2.6.0" />
+          <element id="library" level="project" name="Maven: org.apache.curator:curator-framework:2.6.0" />
+          <element id="library" level="project" name="Maven: org.apache.curator:curator-client:2.6.0" />
+          <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.4.5" />
+          <element id="library" level="project" name="Maven: jline:jline:0.9.94" />
+          <element id="library" level="project" name="Maven: junit:junit:3.8.1" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-instrument-annotation-processor:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-instrument-annotation:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.common:common-api:9.0.6" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:5.0.1.Final" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.1.1.GA" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:0.8.0" />
+          <element id="library" level="project" name="Maven: com.googlecode.libphonenumber:libphonenumber:7.1.1" />
+          <element id="library" level="project" name="Maven: qunar.common:common-core:9.0.6" />
+          <element id="library" level="project" name="Maven: com.codahale.metrics:metrics-core:3.0.2" />
+          <element id="library" level="project" name="Maven: io.netty:netty-all:4.0.24.Final" />
+          <element id="library" level="project" name="Maven: io.netty:netty:3.9.5.Final" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-instrument-http:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-common:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.tc.logging:asynclogger:1.0.0" />
+          <element id="library" level="project" name="Maven: com.lmax:disruptor:3.3.0" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-instrument-lib:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-instrument-asm:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-instrument-tools:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-instrument-agent:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.tc.qtracer:qtracer-jvm-profile:1.2.3" />
+          <element id="library" level="project" name="Maven: qunar.tc.qconfig:qconfig-client:1.2.0" />
+          <element id="library" level="project" name="Maven: qunar.tc.qconfig:qconfig-common:1.2.0" />
+          <element id="library" level="project" name="Maven: com.ning:async-http-client:1.9.31" />
+          <element id="library" level="project" name="Maven: cglib:cglib:3.2.4" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:5.1" />
+          <element id="library" level="project" name="Maven: org.apache.ant:ant:1.9.6" />
+          <element id="library" level="project" name="Maven: org.apache.ant:ant-launcher:1.9.6" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/ROOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="echarts/web/Web" />
+    </root>
+  </artifact>
+</component>

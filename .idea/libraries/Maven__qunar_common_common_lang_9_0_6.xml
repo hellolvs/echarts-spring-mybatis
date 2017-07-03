@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: qunar.common:common-lang:9.0.6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/qunar/common/common-lang/9.0.6/common-lang-9.0.6.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/qunar/common/common-lang/9.0.6/common-lang-9.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/qunar/common/common-lang/9.0.6/common-lang-9.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

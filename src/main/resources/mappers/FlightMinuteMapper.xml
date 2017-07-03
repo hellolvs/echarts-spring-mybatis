@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.qunar.echarts.dao.FlightMinuteDao">
+
+    <resultMap id="BaseResultMap" type="com.qunar.echarts.model.FlightMinuteModel">
+        <id column="id" property="id"/>
+        <result column="datetime" property="datetime"/>
+        <result column="order_num" property="orderNum"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, datetime, order_num
+    </sql>
+
+    <select id="getByDateTime" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        flight_minute
+        WHERE
+        datetime = #{datetime,jdbcType=TIMESTAMP}
+    </select>
+
+    <select id="listByDay" parameterType="String" resultMap="BaseResultMap">
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM
+        flight_minute
+        WHERE
+        DATE(datetime) = #{datetime}
+    </select>
+
+</mapper>

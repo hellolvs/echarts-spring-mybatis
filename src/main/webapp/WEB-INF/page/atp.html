@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>订单统计</title>
+    <link rel="stylesheet" href="http://common.qunarzz.com/lib/prd/bootstrap/3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap-datepicker/1.7.0/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="/static/css/atp.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-tags.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header navbar-left">
+            <span class="navbar-brand glyphicon glyphicon-stats"></span>
+            <span class="navbar-brand">Orders Statistics</span>
+        </div>
+    </div>
+</nav>
+
+<div id="container" class="container-fluid">
+    <div id="row" class="row">
+        <div class="col-xs-2">
+            <div class="form-group">
+                <label>选择日期：</label>
+                <div class="input-icon-group">
+                    <div class='input-group date' id='datetimepicker' data-date="2017-06-01" data-date-format="yyyy-mm-dd">
+                        <input id="dateInput" type='text' class="form-control" readonly/>
+                        <span class="input-group-addon glyphicon glyphicon-calendar"></span>
+                    </div>
+                </div>
+                <div class="btn-group" style="width: 100%">
+                    <button id="addLine" style="width: 50%" class="btn btn-primary" type="button">添加</button>
+                    <button id="clearCharts" style="width: 50%" class="btn btn-danger" type="button">清空</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="my-tag-list" class="tag-list"></div>
+            </div>
+        </div>
+        <div class="col-xs-9">
+            <div id="main"></div>
+        </div>
+    </div>
+</div>
+
+<script src="http://common.qunarzz.com/lib/prd/jquery/3.1.1/jquery.js"></script>
+<script src="http://common.qunarzz.com/lib/prd/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script src="http://common.qunarzz.com/lib/prd/echarts/3.5.4/echarts.common.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap-datepicker/1.7.0/js/bootstrap-datepicker.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap-datepicker/1.7.0/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="/static/js/bootstrap-tags.js"></script>
+<script src="/static/js/atp.js"></script>
+</body>
+</html>

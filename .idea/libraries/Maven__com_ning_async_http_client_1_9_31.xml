@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.ning:async-http-client:1.9.31">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ning/async-http-client/1.9.31/async-http-client-1.9.31.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ning/async-http-client/1.9.31/async-http-client-1.9.31-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ning/async-http-client/1.9.31/async-http-client-1.9.31-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
