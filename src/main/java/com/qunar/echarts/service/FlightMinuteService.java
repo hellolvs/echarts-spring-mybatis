@@ -22,4 +22,6 @@ public interface FlightMinuteService {
 //
 //    int update(FlightMinuteModel flightMinuteModel);
 
+    int batchUpdate(List<FlightMinuteModel> list);
+
 }

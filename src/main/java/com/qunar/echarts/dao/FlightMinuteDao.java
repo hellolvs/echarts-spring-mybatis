@@ -24,4 +24,6 @@ public interface FlightMinuteDao {
 
     int update(FlightMinuteModel flightMinuteModel);
 
+    int batchUpdate(List<FlightMinuteModel> list);
+
 }

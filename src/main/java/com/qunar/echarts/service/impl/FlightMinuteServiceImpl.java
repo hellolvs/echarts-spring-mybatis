@@ -29,4 +29,9 @@ public class FlightMinuteServiceImpl implements FlightMinuteService {
     public List<FlightMinuteModel> listByDay(String date) {
         return flightMinuteDao.listByDay(date);
     }
+
+    @Override
+    public int batchUpdate(List<FlightMinuteModel> list) {
+        return flightMinuteDao.batchUpdate(list);
+    }
 }

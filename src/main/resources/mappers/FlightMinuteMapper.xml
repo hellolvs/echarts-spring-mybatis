@@ -30,7 +30,21 @@
         FROM
         flight_minute
         WHERE
-        DATE(datetime) = #{datetime}
+        DATE(datetime) = #{datetime,jdbcType=TIMESTAMP}
     </select>
+
+    <update id="batchUpdate"  parameterType="java.util.List">
+
+        <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+            UPDATE
+            flight_minute
+            <set>
+                order_num = #{item.orderNum}
+            </set>
+            WHERE
+            datetime = #{item.datetime,jdbcType=TIMESTAMP}
+        </foreach>
+
+    </update>
 
 </mapper>

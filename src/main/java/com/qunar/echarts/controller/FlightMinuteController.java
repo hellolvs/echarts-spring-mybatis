@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import qunar.web.spring.annotation.JsonBody;
@@ -41,6 +42,13 @@ public class FlightMinuteController {
     public List<FlightMinuteModel> listByDay(@PathVariable("date") String date){
         Preconditions.checkArgument(!Strings.isNullOrEmpty(date));
         return flightMinuteService.listByDay(date);
+    }
+
+    @RequestMapping(value = "/update", method = { RequestMethod.POST })
+    @JsonBody
+    public int batchUpdate(@RequestBody List<FlightMinuteModel> list){
+        Preconditions.checkNotNull(list);
+        return flightMinuteService.batchUpdate(list);
     }
 
     /* 异常处理，输出异常信息 */

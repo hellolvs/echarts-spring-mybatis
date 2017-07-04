@@ -11,6 +11,7 @@ $(function () {
 
     $('#addLine').on('click', showLine);              //监听添加按钮，添加echarts折线
     $('#clearCharts').on('click', clearCharts);       //监听清空按钮，清除echarts数据
+    $('#updateCharts').on('click', update);         //监听更新按钮，将数据更新到数据库
     resize();                                         //监听窗口大小，自动调整chart
 });
 
@@ -108,7 +109,7 @@ function getDateArray(endDate, splitTime, count) {
     while (count-- > 0) {
         var d = new Date();
         d.setTime(endTime - count * splitTime);
-        dateArray.push(checkTime(d.getHours()) + ':' + checkTime(d.getMinutes()));
+        dateArray.push(checkTime(d.getHours()) + ':' + checkTime(d.getMinutes()) + ":00");
     }
     return dateArray;
 }
@@ -128,11 +129,7 @@ function showLine() {
         someday = '2017-06-01'
     }
     if (option.legend.data.length > 4) {
-        BootstrapDialog.show({
-            size: 'size-wide',
-            title: '提示',
-            message: $('<div class="imporMsg">不能多于5条数据</div>')
-        });
+        BootstrapDialog.alert('<p class="imporMsg">不能多于5条数据</p>');
         return;
     }
     if ($.inArray(someday, option.legend.data) >= 0) {
@@ -148,6 +145,7 @@ function showLine() {
             var tempSeries = {};
             tempSeries.name = someday;
             tempSeries.type = 'line';
+            tempSeries.calculable = true;
             tempSeries.data = [];
             res.data.forEach(function (ele, index) {
                 tempSeries.data.push(ele['orderNum']);
@@ -209,5 +207,55 @@ function bulidTags() {
                 echart.setOption(option, true);
             }
         }
+    });
+}
+
+function update() {
+    if (option.series.length === 0) {
+        BootstrapDialog.alert('<p class="imporMsg">没有数据，无法更新</p>');
+        return;
+    }
+
+    BootstrapDialog.show({
+        size: 'size-wide',
+        title: '请确认',
+        message: $('<div class="imporMsg">确定要更新到数据库吗？</div>'),
+        buttons: [{
+            label: '确认',
+            cssClass: 'btn btn-primary',
+            action: function (dialog) {
+                var modelList = [];
+                var currentSeries = option.series;
+                echart.getOption().series.forEach(function (ele) {
+                    var dateArray = getDateArray();
+                    var currentSerie = currentSeries.shift();
+                    ele.data.forEach(function (ele2) {
+                        var currentTime = dateArray.shift();
+                        if (parseInt(ele2) !== currentSerie.data.shift()) {
+                            var model = {};
+                            model.datetime = ele.name + " " + currentTime;
+                            model.orderNum = ele2;
+                            modelList.push(model);
+                        }
+                    });
+                });
+                if (modelList.length > 0) {
+                    $.ajax({
+                        type: 'POST',
+                        data: JSON.stringify(modelList),
+                        contentType: 'application/json; charset=utf-8',
+                        url: '/flight_minute_orders/update'
+                    }).done(function (res) {
+                        if (res.status === 0) {
+                            dialog.close();
+                            BootstrapDialog.alert('<p class="imporMsg">更新成功！</p>');
+                        }
+                    });
+                } else {
+                    dialog.close();
+                    BootstrapDialog.alert('<p class="imporMsg">数据已是最新的！</p>');
+                }
+            }
+        }]
     });
 }
